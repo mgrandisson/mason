@@ -1,16 +1,44 @@
-# test_mason
+# Mason CLI
 
-A new Flutter project.
+This project aims to evaluate the implementation and features of mason_cli. \
+You can find bricks examples in the repository [bricks](bricks/)
+>Documentation : [BrickHub](https://docs.brickhub.dev/)
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+```bash
+ #Activate from https://pub.dev
+ dart pub global activate mason_cli
+```
 
-A few resources to get you started if this is your first Flutter project:
+ You may need to manually add Mason to your environment variables.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Initializing
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+By initializing mason this will generate a **mason.yaml** and allow mason to work with bricks scoped locally within the workspace.
+
+```bash
+ mason init
+```
+
+## Installing Bricks
+
+You can add bricks to your project from a local repository or from a Git repository.
+
+```bash
+ # from a local repository
+ mason add [BRICK_NAME] --path [PATH]
+
+ # from a Git repository
+ mason add [BRICK_NAME]
+  --git-url [GIT_URL]   # https://github.com/felangel/mason
+  --git-path [GIT_PATH] # bricks/widget
+```
+
+## Listing all Installed Bricks
+
+You can list all installed bricks.
+
+```bash
+ mason ls
+```
