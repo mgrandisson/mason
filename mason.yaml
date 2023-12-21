@@ -1,0 +1,6 @@
+bricks:
+  hello: 0.1.0+1
+  feature:
+    path: bricks/feature
+  test:
+    path: bricks/test
